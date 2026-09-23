@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alperen Bakla — Kurumsal Bilişim Uzmanlığı</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root{
+    --bg:#0A0E1A; --surface:#111726; --surface-2:#161D30;
+    --line:#232B40; --text:#E7EBF3; --muted:#8B93A8;
+    --blue:#3FD0F0; --green:#3FE0A5;
+  }
+  *{box-sizing:border-box}
+  .ic{display:inline-block;flex:none}
+  html{scroll-behavior:smooth; scroll-padding-top:calc(88px + env(safe-area-inset-top,0px));}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:'Inter',system-ui,sans-serif;
+  }
+  h1,h2,h3,.display{font-family:'Space Grotesk',sans-serif;}
+  .accent-line{background:linear-gradient(90deg,var(--blue),var(--green));}
+  .accent-text{background:linear-gradient(90deg,var(--blue),var(--green));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .card{background:var(--surface); border:1px solid var(--line);}
+  .card-2{background:var(--surface-2); border:1px solid var(--line);}
+  .badge{border:1px solid var(--line); color:var(--muted); background:var(--surface);}
+  .nav-link{position:relative; color:var(--muted); transition:color .2s;}
+  .nav-link:hover{color:var(--text);}
+  .nav-link::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:1px;background:var(--blue);transition:width .25s;}
+  .nav-link:hover::after{width:100%;}
+  .btn-primary{
+    background:var(--text); color:var(--bg);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-primary:hover{transform:translateY(-1px); box-shadow:0 8px 24px -8px rgba(63,208,240,.35);}
+  .btn-outline{
+    border:1px solid var(--line); color:var(--text);
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .btn-outline:hover{border-color:var(--blue); color:var(--blue);}
+  .icon-btn{
+    border:1px solid var(--line); color:var(--muted);
+    transition:all .18s ease;
+  }
+  .icon-btn:hover{border-color:var(--green); color:var(--green); transform:translateY(-2px);}
+  .report-row{transition:background .15s ease;}
+  .report-row:hover{background:var(--surface-2);}
+  .report-row:hover svg{color:var(--green) !important;}
+  .num{font-family:'Space Grotesk',sans-serif; color:var(--muted); font-variant-numeric:tabular-nums;}
+  :focus-visible{outline:2px solid var(--blue); outline-offset:3px;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body class="antialiased">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs><g id="ic-base" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></g></defs>
+<symbol id="i-diagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/><path d="M6 9v3a3 3 0 0 0 3 3h6"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></symbol>
+<symbol id="i-sitemap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M12 8v4M5 16v-4h14v4"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+</svg>
+
+<!-- NAV -->
+<header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md" style="background:rgba(10,14,26,.75); border-bottom:1px solid var(--line); padding-top:env(safe-area-inset-top,0px);">
+  <nav class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#hakkimda" class="display font-semibold text-lg tracking-tight">Alperen Bakla<span class="accent-text">.</span></a>
+    <div class="flex items-center gap-5 sm:gap-8 text-sm">
+      <a href="#hakkimda" class="nav-link hidden sm:inline">Hakkımda</a>
+      <a href="#projeler" class="nav-link">Raporlarım</a>
+      <a href="#iletisim" class="nav-link">İletişim</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO / HAKKIMDA -->
+<section id="hakkimda" class="max-w-5xl mx-auto px-6 pt-36 pb-24">
+  <p class="text-sm tracking-wide" style="color:var(--green)">Burhaniye MYO, Kurumsal Bilişim Uzmanlığı öğrencisi</p>
+  <h1 class="display text-4xl sm:text-6xl font-semibold leading-[1.05] mt-4 max-w-3xl">
+    Bilişim sistemleri ve <span class="accent-text">proje yönetimi</span> çalışmalarım.
+  </h1>
+  <p class="mt-8 max-w-xl text-base leading-relaxed" style="color:var(--muted)">
+    Merhaba, ben Alperen Bakla. Burhaniye MYO Kurumsal Bilişim Uzmanlığı programında öğrenciyim.
+    Derslerde hazırladığım rapor ve dokümanları bu sayfada topluyorum. Dosyalar Google Drive'da açılır.
+  </p>
+
+  <div class="flex flex-wrap gap-3 mt-10">
+    <span class="badge rounded-full px-4 py-1.5 text-sm">Kurumsal Bilişim</span>
+    <span class="badge rounded-full px-4 py-1.5 text-sm">Bilişim Sistemleri</span>
+    <span class="badge rounded-full px-4 py-1.5 text-sm">Proje Yönetimi</span>
+    <span class="badge rounded-full px-4 py-1.5 text-sm">Süreç Analizi</span>
+  </div>
+</section>
+
+<div class="max-w-5xl mx-auto px-6"><div class="h-px" style="background:var(--line)"></div></div>
+
+<!-- RAPORLAR -->
+<section id="projeler" class="max-w-5xl mx-auto px-6 py-24">
+  <h2 class="display text-3xl font-semibold">Bilişim Sistemlerinde Proje Yönetimi</h2>
+  <p class="mt-3 max-w-lg text-sm leading-relaxed" style="color:var(--muted)">
+    Ders kapsamında hazırladığım rapor ve dokümanlar. Dosyalar Google Drive üzerinden paylaşılmaktadır.
+  </p>
+
+  <!-- Yeni rapor eklemek için aşağıdaki <a> satırını kopyalayıp başlığı ve Drive linkini değiştir -->
+  <div class="mt-10 card rounded-2xl overflow-hidden">
+    <a href="https://drive.google.com/drive/folders/DRIVE-LINKI-BURAYA" target="_blank" rel="noopener"
+       class="report-row flex items-center justify-between gap-4 px-6 py-4">
+      <span class="text-sm sm:text-base">Rapor adı 1</span>
+      <svg class="ic" style="width:15px;height:15px;color:var(--muted)" aria-hidden="true"><use href="#i-arrow"/></svg>
+    </a>
+    <a href="https://drive.google.com/drive/folders/DRIVE-LINKI-BURAYA" target="_blank" rel="noopener"
+       class="report-row flex items-center justify-between gap-4 px-6 py-4" style="border-top:1px solid var(--line)">
+      <span class="text-sm sm:text-base">Rapor adı 2</span>
+      <svg class="ic" style="width:15px;height:15px;color:var(--muted)" aria-hidden="true"><use href="#i-arrow"/></svg>
+    </a>
+  </div>
+</section>
+
+<div class="max-w-5xl mx-auto px-6"><div class="h-px" style="background:var(--line)"></div></div>
+
+<!-- İLETİŞİM -->
+<section id="iletisim" class="max-w-5xl mx-auto px-6 py-24">
+  <h2 class="display text-3xl font-semibold">İletişim</h2>
+  <p class="mt-4 max-w-md text-sm leading-relaxed" style="color:var(--muted)">
+    Raporlarım veya kurumsal bilişim üzerine konuşmak istersen bana yazabilirsin.
+  </p>
+  <div class="flex flex-wrap gap-3 mt-10">
+    <a href="mailto:alperenbakla2001@gmail.com" class="btn-primary rounded-full px-5 py-2.5 text-sm font-medium inline-flex items-center gap-2">
+      <svg class="ic" style="width:16px;height:16px" aria-hidden="true"><use href="#i-mail"/></svg> alperenbakla2001@gmail.com
+    </a>
+    <a href="https://github.com/alperenbakla" target="_blank" rel="noopener" class="btn-outline rounded-full px-5 py-2.5 text-sm font-medium inline-flex items-center gap-2">
+      GitHub <svg class="ic" style="width:13px;height:13px" aria-hidden="true"><use href="#i-arrow"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/alperen-bakla/" target="_blank" rel="noopener" class="btn-outline rounded-full px-5 py-2.5 text-sm font-medium inline-flex items-center gap-2">
+      LinkedIn <svg class="ic" style="width:13px;height:13px" aria-hidden="true"><use href="#i-arrow"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer class="max-w-5xl mx-auto px-6 pb-12 pt-4">
+  <div class="h-px mb-8" style="background:var(--line)"></div>
+  <p class="text-xs" style="color:var(--muted)">© <span id="year"></span> Alperen Bakla. Burhaniye MYO Kurumsal Bilişim Uzmanlığı.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
